@@ -74,7 +74,7 @@ export class UpdateVehicleComponent implements OnInit, OnChanges {
   }
 
   onSubmit() {
-    this.httpClientService.udateVehicle({ ...this.form.value, id: this.vehicle.id })
+    this.httpClientService.updateVehicle({ ...this.form.value, id: this.vehicle.id })
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: (response) => {

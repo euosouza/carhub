@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from "../../../environments/environment";
 import { CreateVehicles, Vehicles } from '../../interfaces/Vehicles';
-import {environment} from "../../../environments/environment"
 
 export interface HttpResponseObservable<T> {
   data: T;
@@ -33,7 +33,7 @@ export class HttpClientService {
       .post<HttpResponseObservable<Vehicles>>(url, vehicle)
   }
 
-  udateVehicle(vehicle: CreateVehicles): Observable<HttpResponseObservable<Vehicles>> {
+  updateVehicle(vehicle: CreateVehicles): Observable<HttpResponseObservable<Vehicles>> {
     return this.http
       .put<HttpResponseObservable<Vehicles>>(url, vehicle)
   }

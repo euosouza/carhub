@@ -29,6 +29,7 @@
     <div class="group-form">
       <label for="ano">Ano:<span class="prop-required">*</span></label>
       <select formControlName="ano" id="ano">
+        <option value="" disabled selected>Ano</option>
         <option *ngFor="let y of years" [value]="y">{{ y }}</option>
       </select>
       <span

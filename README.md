@@ -18,6 +18,13 @@ Entrar na pasta do frontend(client): ``cd client``
   npm start
 ```
 
+## Como rodar os testes:
+Entrar na pasta do backend(server): ``cd server``
+
+```bash
+  npm run test
+```
+
 ## Funcionalidades
 
 - Dark Mode;

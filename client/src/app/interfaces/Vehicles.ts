@@ -5,7 +5,7 @@ export interface Vehicles {
   renavam: string;
   modelo: string;
   marca: string;
-  ano: number;
+  ano: string;
 }
 
 export interface CreateVehicles {
@@ -14,5 +14,5 @@ export interface CreateVehicles {
   renavam: string;
   modelo: string;
   marca: string;
-  ano: number;
+  ano: string;
 }

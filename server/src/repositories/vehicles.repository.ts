@@ -8,7 +8,7 @@ export class VehiclesRepository implements IVehiclesRepositores {
     return await prisma.vehicles.findMany();
   }
 
-  async findOne(id: number): Promise<Vehicles> {
+  async findOne(id: number): Promise<Vehicles | null> {
     console.log(typeof id);
     const result = await prisma.vehicles.findUnique({
       where: {

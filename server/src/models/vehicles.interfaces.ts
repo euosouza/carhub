@@ -22,7 +22,7 @@ export interface CreateVehicles {
 export interface IVehiclesRepositores {
   create(vehicle: Vehicles): Promise<Vehicles>;
   findAll(): Promise<Vehicles[]>;
-  findOne(id: number): Promise<Vehicles>;
+  findOne(id: number): Promise<Vehicles | null>;
   remove(id: number): Promise<Vehicles>;
   update(vehicle: Vehicles): Promise<Vehicles>;
 }

@@ -36,12 +36,12 @@ export class CreateVehicleComponent {
   }
 
   form = this.formBuilderService.group({
-    marca: [null, Validators.required],
-    ano: [null, Validators.required],
-    modelo: [null, Validators.required],
-    placa: [null, Validators.required],
-    chassi: [null, Validators.required],
-    renavam: [null, Validators.required],
+    marca: ["", Validators.required],
+    ano: ["", Validators.required],
+    modelo: ["", Validators.required],
+    placa: ["", Validators.required],
+    chassi: ["", Validators.required],
+    renavam: ["", Validators.required],
   })
 
   generateYearRange(): void {

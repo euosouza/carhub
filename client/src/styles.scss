@@ -85,6 +85,20 @@ form {
   width: 100%;
 }
 
+label {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-primary);
+
+  .prop-required {
+    font-size: 10px;
+    color: var(--color-danger-500);
+  }
+}
+
 input,
 select {
   padding: 10px;
@@ -117,24 +131,17 @@ select {
   }
 }
 
+select {
+  max-height: 200px !important;
+  overflow-y: auto;
+}
+
 .error-message {
   font-size: 10px;
   color: var(--color-danger-500);
 }
 
-label {
-  font-size: 14px;
-  font-weight: 600;
-  display: block;
-  display: flex;
-  align-items: flex-start;
-  color: var(--text-primary);
 
-  .prop-required {
-    font-size: 10px;
-    color: var(--color-danger-500);
-  }
-}
 
 .wrapper-group-form {
   display: flex;

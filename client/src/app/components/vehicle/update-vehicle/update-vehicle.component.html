@@ -1,0 +1,76 @@
+<div class="wrapper-header">
+  <h2>Editar veículo</h2>
+  <p>Para editar o veículo basta sobreescrever as informações que deseja alterar</p>
+
+  <p class="id">ID: {{vehicle.id}}</p>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="group-form">
+    <label for="marca">Marca:<span class="prop-required">*</span></label>
+    <input id="marca" type="text" formControlName="marca" placeholder="Digite a marca do veículo">
+    <span
+      *ngIf="form.get('marca')?.hasError('required') && form.get('marca')?.invalid && (form.get('marca')?.dirty || form.get('marca')?.touched)"
+      class="error-message">
+      Propriedade obrigatória
+    </span>
+  </div>
+  <div class="group-form">
+    <label for="modelo">Modelo:<span class="prop-required">*</span></label>
+    <input id="modelo" type="text" formControlName="modelo" placeholder="Digite o modelo do veículo">
+    <span
+      *ngIf="form.get('modelo')?.hasError('required') && form.get('modelo')?.invalid && (form.get('modelo')?.dirty || form.get('modelo')?.touched)"
+      class="error-message">
+      Propriedade obrigatória
+    </span>
+  </div>
+
+  <div class="wrapper-group-form">
+    <div class="group-form">
+      <label for="ano">Ano:<span class="prop-required">*</span></label>
+      <select formControlName="ano" id="ano">
+        <option *ngFor="let y of years" [value]="y">{{ y }}</option>
+      </select>
+      <span
+        *ngIf="form.get('ano')?.hasError('required') && form.get('ano')?.invalid && (form.get('ano')?.dirty || form.get('ano')?.touched)"
+        class="error-message">
+        Propriedade obrigatória
+      </span>
+    </div>
+    <div class="group-form">
+      <label for="placa">Placa:<span class="prop-required">*</span></label>
+      <input id="placa" type="text" formControlName="placa" placeholder="Digite a placa">
+      <span
+        *ngIf="form.get('placa')?.hasError('required') && form.get('placa')?.invalid && (form.get('placa')?.dirty || form.get('placa')?.touched)"
+        class="error-message">
+        Propriedade obrigatória
+      </span>
+    </div>
+  </div>
+
+  <div class="wrapper-group-form">
+    <div class="group-form">
+      <label for="chassi">Chassi:<span class="prop-required">*</span></label>
+      <input id="chassi" type="text" formControlName="chassi" placeholder="Digite o chassi">
+      <span
+        *ngIf="form.get('chassi')?.hasError('required') && form.get('chassi')?.invalid && (form.get('chassi')?.dirty || form.get('chassi')?.touched)"
+        class="error-message">
+        Propriedade obrigatória
+      </span>
+    </div>
+    <div class="group-form">
+      <label for="renavam">Renavam:<span class="prop-required">*</span></label>
+      <input id="renavam" type="text" formControlName="renavam" placeholder="Digite o renavam">
+      <span
+        *ngIf="form.get('renavam')?.hasError('required') && form.get('renavam')?.invalid && (form.get('renavam')?.dirty || form.get('renavam')?.touched)"
+        class="error-message">
+        Propriedade obrigatória
+      </span>
+    </div>
+  </div>
+
+  <div class="wrapper-buttons">
+    <app-button (click)="closeModal()" type="button" label="Fechar" [variation]="'default-outline'" />
+    <app-button type="submit" label="Editar" [variation]="'primary'" [disabled]="!form.valid" />
+  </div>
+</form>

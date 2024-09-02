@@ -1,0 +1,18 @@
+<div class="toast-wrapper">
+  <ng-container *ngFor="let toast of toasts.reverse()">
+    <div #toast class="toast-notification-wpp-container" [class.show-toast-notification]="toast.show" [class.hide-toast-notification]="!toast.show">
+      <div
+        class="toast-notification-card border"
+        [class]="[toast.type]"
+      >
+        <button class="btn-close" *ngIf="toast.id" (click)="dismissToast(toast.id)">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <p class="title" *ngIf="toast.title">{{ toast.title }}</p>
+        <p class="text" *ngIf="toast.text">{{ toast.text }}</p>
+      </div>
+    </div>
+  </ng-container>
+</div>

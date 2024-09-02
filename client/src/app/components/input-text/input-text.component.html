@@ -1,0 +1,14 @@
+<div class="input-container">
+  <label *ngIf="label" [attr.for]="id">
+    {{ label }}
+
+    <input
+      [id]="id"
+      [type]="type"
+      [placeholder]="placeholder"
+      [formControl]="control"
+      [ngClass]="inputClass"
+      [disabled]="disabled"
+    />
+  </label>
+</div>

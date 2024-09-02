@@ -1,0 +1,20 @@
+<div class="wrapper-header">
+  <h2>Informações</h2>
+  <p>Abaixo estão as informações sobre o veículo</p>
+
+  <p class="id">ID: {{vehicle.id}}</p>
+</div>
+
+<div class="wrapper-info">
+  <p><strong>Marca:</strong> {{vehicle.marca}}</p>
+  <p><strong>Modelo:</strong> {{vehicle.modelo}}</p>
+  <p><strong>Ano:</strong> {{vehicle.ano}}</p>
+  <p><strong>Placa:</strong> {{vehicle.placa}}</p>
+  <p><strong>Chassi:</strong> {{vehicle.chassi}}</p>
+  <p><strong>Renavam:</strong> {{vehicle.renavam}}</p>
+</div>
+
+
+<div class="wrapper-buttons">
+  <app-button (click)="closeModal()" type="button" label="Fechar" [variation]="'default-outline'" />
+</div>

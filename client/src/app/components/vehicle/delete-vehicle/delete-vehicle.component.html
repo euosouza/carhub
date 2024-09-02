@@ -1,0 +1,14 @@
+<div class="wrapper-header text-center ">
+  <h2>Deletar veículo</h2>
+  <p>Tem certeza que deseja deletar o veículo?</p>
+
+  <div class="wrapper-tags">
+    <p class="id">ID: {{vehicle.id}}</p>
+    <p class="id">Placa: {{vehicle.placa}}</p>
+  </div>
+</div>
+
+<div class="wrapper-buttons">
+  <app-button (click)="closeModal()" type="button" label="Fechar" [variation]="'default-outline'" />
+  <app-button (click)="onSubmit()" type="button" label="Deletar" [variation]="'danger'" />
+</div>

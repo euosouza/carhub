@@ -1,0 +1,50 @@
+.wrapper {
+  width: 100%;
+
+  padding-top: 2rem;
+
+  @media(min-width: 768px) {
+    padding-top: 5rem;
+  }
+
+}
+
+.wrapper-theme {
+  width: 100%;
+  background-color: var(--background-secondary);
+  display: grid;
+  justify-items: flex-end;
+  align-items: center;
+  padding: 0.6rem;
+
+  .btn-theme {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    transition: 0.3s ease-in;
+    font-size: 12px;
+    font-weight: 500;
+
+    div {
+      display: flex;
+      justify-items: flex-end;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--icon-theme);
+      transition: 0.3s ease-in;
+    }
+
+    &:hover {
+      color: var(--color-primary-500);
+
+      svg {
+        stroke: var(--color-primary-500);
+      }
+    }
+  }
+}

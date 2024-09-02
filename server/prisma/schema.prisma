@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Vehicles {
+  id Int @id @default(autoincrement())
+  placa String @unique
+  chassi String
+  renavam String
+  modelo String
+  marca String
+  ano String
+
+  createdAt DateTime @default(now())
+  updateddAt DateTime @updatedAt
+
+  @@map("vehicles")
+}
+

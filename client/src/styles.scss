@@ -1,0 +1,210 @@
+@import "./app/assets/styles/scss/scroll.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --text-primary: var(--color-gray-800);
+  --text-secondary: #363636;
+  --icon-theme: var(--color-gray-900);
+
+  --background-primary: var(--color-gray-0);
+  --background-secondary: rgb(240, 240, 240);
+
+  --background-input: var(--color-gray-0);
+  --border-input: var(--color-gray-200);
+
+  --scroll-bar-1: var(--color-gray-200);
+  --scroll-bar-2: var(--color-gray-300);
+
+  --background-btn-outline: transparent;
+  --border-btn-outline: var(--color-gray-800);
+  --background-btn-outline-hover: var(--color-gray-800);
+
+  --color-gray-0: #FFFFFF;
+  --color-gray-50: rgb(240, 240, 240);
+  --color-gray-100: #ececec;
+  --color-gray-200: #cccccc;
+  --color-gray-300: #bbbbbb;
+  --color-gray-400: #aaaaaa;
+  --color-gray-500: #323131;
+  --color-gray-600: #414141;
+  --color-gray-700: #252525;
+  --color-gray-800: #202020;
+  --color-gray-900: #121212;
+
+
+  --color-primary-500: rgb(212, 73, 9);
+  --color-primary-700: rgb(196, 66, 6);
+
+  --color-danger-500: #dc3545;
+  --color-danger-700: rgb(185, 51, 51);
+
+  --color-info-500: rgb(87, 118, 255);
+  --color-success-500: #28a745;
+}
+
+.dark-mode {
+  --text-primary: var(--color-gray-100);
+  --text-secondary: var(--color-gray-200);
+  --icon-theme: var(--color-gray-0);
+
+  --background-primary: var(--color-gray-900);
+  --background-secondary: var(--color-gray-500);
+
+  --background-input: var(--color-gray-700);
+  --border-input: var(--color-gray-600);
+
+  --scroll-bar-1: var(--color-gray-700);
+  --scroll-bar-2: var(--color-gray-500);
+
+  --background-btn-outline: transparent;
+  --border-btn-outline: var(--color-gray-600);
+  --background-btn-outline-hover: var(--color-gray-800);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+form {
+  width: 100%;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid var(--border-input);
+  background-color: var(--background-input);
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  color: var(--text-primary);
+
+  &::placeholder {
+    font-size: 14px;
+    color: var(--color-gray-400);
+  }
+
+  &:focus {
+    border-color: var(--color-primary-500);
+    ;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 73, 9, 0.1);
+    ;
+  }
+
+  &.ng-invalid.ng-touched {
+    border-color: var(--color-danger-500);
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.2);
+  }
+}
+
+.error-message {
+  font-size: 10px;
+  color: var(--color-danger-500);
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-primary);
+
+  .prop-required {
+    font-size: 10px;
+    color: var(--color-danger-500);
+  }
+}
+
+.wrapper-group-form {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.group-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  margin-bottom: 1rem;
+}
+
+.wrapper-buttons {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.8rem;
+
+  button {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+.wrapper-header {
+  border-bottom: 1px solid var(--border-input);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+  &.text-center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-secondary);
+
+    &.id {
+      margin-top: 0.5rem;
+      background-color: var(--border-input);
+      color: var(--text-primary);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 0.2rem 0.4rem;
+      max-width: max-content;
+      border-radius: 4px;
+    }
+  }
+}
+
+.wrapper-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+

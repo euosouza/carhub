@@ -1,0 +1,8 @@
+<button
+  [attr.type]="type"
+  [ngClass]="buttonClass"
+  [disabled]="disabled || loading"
+>
+  <ng-container *ngIf="!loading">{{ label }}</ng-container>
+  <ng-container *ngIf="loading">Loading...</ng-container>
+</button>

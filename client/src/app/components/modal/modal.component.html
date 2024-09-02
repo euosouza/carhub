@@ -1,0 +1,23 @@
+<div
+  *ngIf="showModal"
+  class="modal"
+  [class.show-modal]="showModal"
+  (keydown)="handleKeyDown($event)"
+  tabindex="0"
+>
+  <div
+    class="modal-card"
+    [class.show-modal]="showModal"
+    (click)="$event.stopPropagation()"
+    (keydown)="handleKeyDown($event)"
+    tabindex="1"
+  >
+    <button class="btn-close" (click)="closeModal()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <ng-content></ng-content>
+  </div>
+</div>
+
